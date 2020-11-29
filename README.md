@@ -1,103 +1,111 @@
-## 实验二-Android布局
+# 实验一 - HelloWorld
 
-实验准备：创建一个空项目工程，基本步骤同于实验一，不再赘述。创建项目完成后，在res/layout下创建3个布局文件：线性布局linear_layout.xml、约束布局constraint_layou.xmlt和表格布局table_layout.xml(如下图所示)
+## 一、Android Studio的安装
 
-<img src="https://i.loli.net/2020/11/01/Vk9oFPbWIYzvQLD.png" alt="`2JY_IV2ZELHMPA__`78`BT.png" style="zoom: 50%;" />
+1、Android Studio官网下载安装：
 
-接着，开始对每一个布局文件一一进行设计。
+[https://developer.android.google.cn/studio/ ](https://developer.android.google.cn/studio/)
 
-#### 一、线性布局
+2、这里选择的是版本是：
 
-1、线性布局中，页面上的组件都要写在<LinearLayout></LinearLayout>中，这里只用到了按钮组件Button。
+![version.png](https://i.loli.net/2020/10/06/x4bvahSpe9sDABd.png)
 
-页面的基本思想就是：整体上一行行沿垂直方向布局，其中每一行中的按钮沿水平方向布局。（代码比较长，就不完整粘贴了）
+## 二、创建第一个Android项目
 
-![O_TBKFENT_F5FJ~WAGXFU`4.png](https://i.loli.net/2020/11/02/H4njBEOrh8WJaZk.png)
+1、双击打开前面已经安装好的Android Studio编译器
 
-至于Button边框的实现，通过定义一个button_style.xml文件进行装饰，最后在<Button>属性里加上android:background="@drawable/button_style"即可实现。
+2、选择Start a new Android Studio project，然后Next
 
-button_style.xml文件如下：
+![start.png](https://i.loli.net/2020/10/06/SJvCbnkrIy4VXcD.png)
 
-<img src="https://i.loli.net/2020/11/02/IFzcmWx32PfBpa9.png" alt="DS7W____3`JLX8ODMRP1FFC.png" style="zoom:50%;" />
+3、在Choose your project 页选择Empty Activity，然后Next
+
+![empty.png](https://i.loli.net/2020/10/06/HO7EULCmiVl98PM.png)
+
+4、在Configure your project 页填写该project的”Name“为”HelloWorld“，Package name默认，Save location为项目保存的位置，自定义。Language这里的选的Java，然后Finish。
+
+![figure.png](https://i.loli.net/2020/10/06/Xxvd5T7wE2Rtzfb.png)
+
+5、创建成功后打开可以在左侧栏看到项目整体目录结构：
+
+![construction.png](https://i.loli.net/2020/10/06/qXnuRlGvgBz5yS8.png)
+
+6、在run第一个project前，要File--->settings,配置基本环境。例如sdk的下载安装，virtual device的选择，自定义编译器背景等....
+
+![sdk.png](https://i.loli.net/2020/10/06/sCP7OAGR1DuKhxk.png)
+
+![Piex.png](https://i.loli.net/2020/10/06/1Hip43RMmAgGQvW.png)
+
+![background.png](https://i.loli.net/2020/10/06/RF3LW6w2AnHheXi.png)
 
 
 
-2、除了规规矩矩地手写代码外、布局也可以直接通过design手动拖拽组件布局，简单方便。
+7、编译运行第一个项目，File--->Sync with File System, 开始加载资源编译运行。由于电脑性能配置不是很好，花了较多时间。后面使用本地的gradle后时间有所缩短。而且，第一次运行编译发现了一些bug，后面各种debug后，run successfully。
 
-<img src="https://i.loli.net/2020/11/02/LG1difBSHMlXEO7.png" alt="LRQ08_PC27UK8S_`XC_58PG.png" style="zoom:50%;" />
+![hello.png](https://i.loli.net/2020/10/06/7HugQajdGUJZEOc.png)
 
-3、但不管是手写代码，还是通过design拖拽组件，给组件添加text时，都不能直接在 xml 文件里面写（编译器会有提示不建议采用hardcode），规范的写法应该是在 strings.xml 文件中，声明定义好需要的组件的id和text值,然后在布局文件里直接调用（声明如下图）
+## 三、自定义HelloWorld
 
-<img src="https://i.loli.net/2020/11/01/PLXoIR9QBYc6dpi.png" alt="J7P8GH5G3T_0VP142_7VTHO.png" style="zoom: 50%;" />
+1、自定义Title
 
-4、编写完linear_layout和string.xml两个xml文件后。回到MainActivity.java文件中，设置项目编译运行打开的布局文件为Linear_Layout文件，而不是原项目默认的activity_main.xml文件（当然如果你是在activity_main.xml中编写的线性布局代码的话，就不用改了）。
+![title.png](https://i.loli.net/2020/10/06/aD9KCwMLkQdgi3f.png)
 
-![YYCN@_FI_5V6OZ8NDGP_8VA.png](https://i.loli.net/2020/11/01/91bHnkVOjA3Yg8a.png)
+2、自定义Content
 
-5、做完上述操作后，编译运行整个项目，打开模拟器，就会看到最终页面效果（如下图）
+![content.png](https://i.loli.net/2020/10/06/ysKzCBeE93f4Adg.png)
 
-<img src="https://i.loli.net/2020/11/02/mHA7o6FdOqWgjpV.png" alt="T_RUX329AOP8N99_PDDITCR.png" style="zoom:50%;" />
+## 四、Git的下载安装
 
+1、直接去Git官网下载安装即可：
 
+[https://git-scm.com/](https://git-scm.com/)
 
-#### 二、约束布局
+## 五、使用Git将本地项目资源打包上传到Github远程仓库
 
-1、约束布局同样，页面上的组件都要写在<ConstraintLayout></Constraintayout>中，这里的矩形图案用TextView组件实现。
+（Tip：从本地上传文件到github的前提是，已经注册一个github账户，并且账户里已经创建用于存放项目的仓库）
 
-<img src="https://i.loli.net/2020/11/01/El9sqYBLUKhrufA.png" alt="9N_ENWGFB~B0G5W_L`4@1E7.png" style="zoom:80%;" />
+在github上的新建仓库后的应该看到：
 
-注：约束布局要求每个组件，都必须为其设置水平、垂直两个方向上的约束。（代码比较长，就不完整粘贴了）
+![newreposi.png](https://i.loli.net/2020/10/06/1gn4cZ7Q2GB3kWD.png)
 
-2、直接通过design手动拖拽组件布局，设计页面如下：
+1、在项目文件的上一层目录，右键目录文件，选择用Git-Bash打开。
 
-<img src="https://i.loli.net/2020/11/01/8eXilM29kqDBZfW.png" alt="_J2_VFXAKLFVW8`U0_QVMU8.png" style="zoom:80%;" />
+2、在弹出来的命令行窗口依次执行以下命令（在github上新建仓库后也有相应命令行的提示）：
 
-3、布局完基本组件位置后也一样，给组件添加text时，都不能直接在 xml 文件里面写，在 strings.xml 文件中，声明定义好需要的组件的id和text值,然后在布局文件里直接使用（声明如下图）
+（1）git init 
 
-<img src="https://i.loli.net/2020/11/01/XP38yqdiH2z6mtB.png" alt="L_K0D0_H~F@4_X~MUH_3_1Y.png" style="zoom:50%;" />
+![init.png](https://i.loli.net/2020/10/06/QEC2s6VlkgA5u9W.png)
 
-4、在MainActivity.java文件中，设置项目编译运行打开的布局文件为constraint_layout文件，而不是原项目默认的activity_main.xml文件（当然如果你是在activity_main.xml中编写的线性布局代码的话，就不用改了）。
+（2）git config --global user.name 'your username'
 
-![_CEWG_FLQL~W__5IJ5JMRVD.png](https://i.loli.net/2020/11/01/PwDUKz8bLO5oHiW.png)
+![username.png](https://i.loli.net/2020/10/06/yVefZGK6Tw4vFjY.png)
 
-5、做完上述操作后，编译运行整个项目，打开模拟器，就会看到最终页面效果（如下图）
+（3）git config --global user.email 'your email'
 
-<img src="https://i.loli.net/2020/11/01/LPED7QGriO3zaRy.png" alt="WMPO9XXZ@_2N_Z`SKZ7@__Y.png" style="zoom: 50%;" />
+![email.png](https://i.loli.net/2020/10/06/PoJECKF1QmB9sgI.png)
 
-#### 三、表格布局
+（4）git add dest(你的项目文件名，这里是MyAppLication)
 
-1、表格布局也是，页面上的组件都要写在<TableLayout></TableLayout>中，这里用到了按钮组件Button和TextView组件。
+![add.png](https://i.loli.net/2020/10/06/rq6Sxt8loMQu2fE.png)
 
-<img src="https://i.loli.net/2020/11/01/cYaVjdT1mXoh8fw.png" alt="U_@GJM3A@___@WG0J@LVIEK.png" />
+（5）git commit -m 'brief introduction for your program'(备注)
 
-表格布局需要设定行<TableRow>,行里面的组件个数就是列个数。
+![commit.png](https://i.loli.net/2020/10/06/VUWrxzL4SAvbcEg.png)
 
-需要说的是，页面上的分割线，用了2dp高，背景颜色为#3c3c3c的TextView组件实现。
+（6）git branch -M master
 
-<img src="https://i.loli.net/2020/11/01/GI2Skz6HsJ4Vna3.png" alt="_60QJ7Z~X`_Z4XRW5EIYJ_K.png" style="zoom:50%;" />
+![branch.png](https://i.loli.net/2020/10/06/mgI5AFs6Oe3hWYa.png)
 
-（代码比较长，就不完整粘贴了）
+（7）git remote add origin https://......(github上的仓库地址)
 
-2、在design中，设计页面如下：
+![remote.png](https://i.loli.net/2020/10/06/eTC62g83scyOSzM.png)
 
-<img src="https://i.loli.net/2020/11/01/r8JZiG3QzT19jCl.png" alt="YK7_IPAQ_SS7F_HCL__874Q.png" style="zoom:50%;" />
+（8）git push -u origin master
 
-3、在 strings.xml 文件中，声明定义好需要的组件的id和text值,然后在布局文件里直接调用（声明如下图）
+![push.png](https://i.loli.net/2020/10/06/DN5gQUuB9MRjECf.png)
 
-![CS_`K21ZXL__D_XN_7TV_D8.png](https://i.loli.net/2020/11/01/wHYsbvMEglK4c1X.png)
+3、项目上传成功后，github上创新页面，会看到仓库中多了前面上传好的项目。
 
-4、在MainActivity.java文件中，设置项目编译运行打开的布局文件为table_layout文件，而不是原项目默认的activity_main.xml文件。
+## 六、总结
 
-<img src="https://i.loli.net/2020/11/01/14l6u7JctfsNMnd.png" alt="GQF_@K___BR~C__XGES_V_9.png" style="zoom:50%;" />
-
-5、做完上述操作后，编译运行整个项目，打开模拟器，就会看到最终页面效果（如下图）
-
-<img src="https://i.loli.net/2020/11/01/PETd7SDY6OIfvK4.png" alt="_SVV_K__8_~GGRF4PX6AD_L.png" style="zoom:50%;" />
-
-#### 四、项目打包上传Github
-
-具体的打包上传步骤跟实验一中的“**五、使用Git将本地项目资源打包上传到Github远程仓库**”一样，不再赘述。
-
-#### 五、总结
-
-学会了在Android Studio中，使用线性布局、约束布局、表格布局三种主要设计页面布局方式。了解每一种布局方式的基本原理。
+​		第一次实验，熟悉Android Studio的一些基本操作，能够创建一个Android项目并且成功运行项目；同时，也了解到了Git的一些基本用法，掌握了将本地git仓库上的资源上传到github远程仓库的基本步骤。
