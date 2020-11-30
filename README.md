@@ -4,7 +4,7 @@
 
 1、Android Studio官网下载安装：
 
-[https://developer.android.google.cn/studio/ ](https://developer.android.google.cn/studio/)
+[https://developer.android.google.cn/studio/ ](https://developer.android.google.cn/studio/!/scale/50)
 
 2、这里选择的是版本是：
 
