@@ -42,7 +42,7 @@
 
 7、编译运行第一个项目，File--->Sync with File System, 开始加载资源编译运行。由于电脑性能配置不是很好，花了较多时间。后面使用本地的gradle后时间有所缩短。而且，第一次运行编译发现了一些bug，后面各种debug后，run successfully。
 <br/>
-<img width="230" height="400"  src="https://i.loli.net/2020/10/06/7HugQajdGUJZEOc.png" alt="hello.png" style="zoom:50%;" />
+<img width="230" height="450"  src="https://i.loli.net/2020/10/06/7HugQajdGUJZEOc.png" alt="hello.png" style="zoom:50%;" />
 
 ## 三、自定义HelloWorld
 
@@ -66,7 +66,7 @@
 
 在github上的新建仓库后的应该看到：<br/>
 
-<img width="700" height="400"  src="https://i.loli.net/2020/10/06/1gn4cZ7Q2GB3kWD.png" alt="newreposi.png"  />
+<img width="800" height="400"  src="https://i.loli.net/2020/10/06/1gn4cZ7Q2GB3kWD.png" alt="newreposi.png"  />
 
 1、在项目文件的上一层目录，右键目录文件，选择用Git-Bash打开。
 
