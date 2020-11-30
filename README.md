@@ -3,9 +3,8 @@
 ## 一、Android Studio的安装
 
 1、Android Studio官网下载安装：
-
-[https://developer.android.google.cn/studio/ ](https://developer.android.google.cn/studio/!/scale/50)
-
+<br/>
+<img src="https://developer.android.google.cn/studio/" width="400" height="300">
 2、这里选择的是版本是：
 
 ![version.png](https://i.loli.net/2020/10/06/x4bvahSpe9sDABd.png)
